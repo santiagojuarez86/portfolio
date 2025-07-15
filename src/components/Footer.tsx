@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900/90 backdrop-blur-sm text-gray-300 py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
+          <div className="hidden md:block mb-4 md:mb-0">
             <h2 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-teal-300 text-transparent bg-clip-text">
               Santiago Juarez
             </h2>
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
           
           <div>
             <p className="text-sm text-gray-400">
-              &copy; {currentYear} Santiago Juarez. {t('footer.rights')}
+              Copyright &copy; {currentYear} Santiago Juarez. {t('footer.rights')}
             </p>
           </div>
         </div>

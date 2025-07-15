@@ -56,7 +56,7 @@ const translations = {
     'contact.sending': 'Enviando...',
     'contact.info': 'Información de contacto',
     'contact.social': 'Redes sociales',
-    'contact.quote': '"La pasión por la tecnología y la innovación me impulsa a crear soluciones web excepcionales."',
+    'contact.quote': '"La programación no es solo escribir código, es diseñar el futuro"',
     
     // Form validation
     'form.nameRequired': 'El nombre es requerido',
@@ -128,7 +128,7 @@ const translations = {
     'contact.sending': 'Sending...',
     'contact.info': 'Contact information',
     'contact.social': 'Social media',
-    'contact.quote': '"Passion for technology and innovation drives me to create exceptional web solutions."',
+    'contact.quote': '"Programming is not just about writing code — it\'s about designing the future."',
     
     // Form validation
     'form.nameRequired': 'Name is required',
