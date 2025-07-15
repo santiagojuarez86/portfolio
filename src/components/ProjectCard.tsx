@@ -10,6 +10,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   const { t } = useLanguage();
+  const isPlaceholder = project.title.includes('Construcción');
 
   return (
     <div 
@@ -44,33 +45,35 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           ))}
         </div>
         
-        <div className="flex space-x-4 pt-2">
-          {project.repoUrl && (
-            <a 
-              href={project.repoUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center"
-              aria-label={`GitHub repository for ${project.title}`}
-            >
-              <Github size={18} className="mr-1" />
-              <span>{t('projects.repo')}</span>
-            </a>
-          )}
-          
-          {project.demoUrl && (
-            <a 
-              href={project.demoUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center"
-              aria-label={`Live demo for ${project.title}`}
-            >
-              <ExternalLink size={18} className="mr-1" />
-              <span>{t('projects.demo')}</span>
-            </a>
-          )}
-        </div>
+        {!isPlaceholder && (
+          <div className="flex space-x-4 pt-2">
+            {project.repoUrl && (
+              <a 
+                href={project.repoUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center"
+                aria-label={`GitHub repository for ${project.title}`}
+              >
+                <Github size={18} className="mr-1" />
+                <span>{t('projects.repo')}</span>
+              </a>
+            )}
+            
+            {project.demoUrl && (
+              <a 
+                href={project.demoUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center"
+                aria-label={`Live demo for ${project.title}`}
+              >
+                <ExternalLink size={18} className="mr-1" />
+                <span>{t('projects.demo')}</span>
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
