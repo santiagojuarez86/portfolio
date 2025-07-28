@@ -13,7 +13,7 @@ const Footer = lazy(() => import('./components/Footer'));
 function App() {
   useEffect(() => {
     document.title = 'Santiago Juarez - Full Stack Developer';
-    
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -25,14 +25,10 @@ function App() {
       { threshold: 0.1 }
     );
 
-    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-      observer.observe(el);
-    });
+    document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
 
     return () => {
-      document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-        observer.unobserve(el);
-      });
+      document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.unobserve(el));
     };
   }, []);
 
@@ -45,7 +41,10 @@ function App() {
           <main>
             <Hero />
             <AboutMe />
+
+            {/* Projects */}
             <LazySection
+              id="projects"
               fallback={
                 <section className="py-20 bg-gray-800/90 backdrop-blur-sm">
                   <div className="container mx-auto px-4">
@@ -64,7 +63,10 @@ function App() {
             >
               <Projects />
             </LazySection>
+
+            {/* Contact */}
             <LazySection
+              id="contact"
               fallback={
                 <section className="py-20 bg-gray-900/90 backdrop-blur-sm">
                   <div className="container mx-auto px-4">
@@ -87,6 +89,8 @@ function App() {
               <Contact />
             </LazySection>
           </main>
+
+          {/* Footer */}
           <LazySection
             fallback={
               <footer className="py-8 bg-gray-900">

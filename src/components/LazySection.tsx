@@ -1,7 +1,8 @@
-import React, { lazy, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { useLazyLoad } from '../hooks/useLazyLoad';
 
 interface LazySectionProps {
+  id?: string;
   children: React.ReactNode;
   fallback?: React.ReactNode;
   className?: string;
@@ -10,6 +11,7 @@ interface LazySectionProps {
 }
 
 const LazySection: React.FC<LazySectionProps> = ({
+  id,
   children,
   fallback = (
     <div className="min-h-[400px] flex items-center justify-center">
@@ -27,7 +29,7 @@ const LazySection: React.FC<LazySectionProps> = ({
   const { ref, isVisible } = useLazyLoad({ threshold, rootMargin });
 
   return (
-    <div ref={ref} className={className}>
+    <div id={id} ref={ref} className={`animate-on-scroll ${className}`}>
       {isVisible ? (
         <Suspense fallback={fallback}>
           {children}
