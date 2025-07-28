@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import LanguageToggle from './LanguageToggle';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/useLanguage';
 import { scrollToSection } from '../utils/scrollUtils';
 import { NavLink } from '../types';
 

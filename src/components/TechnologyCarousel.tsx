@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/useLanguage';
 import {
   ReactIcon,
   JavaScriptIcon,

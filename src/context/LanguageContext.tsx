@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, ReactNode } from 'react';
 
 type Language = 'es' | 'en';
 
@@ -33,18 +33,8 @@ const translations = {
     'projects.demo': 'Demo',
     
     // Project descriptions
-    'project.ecommerce.title': 'E-Commerce Platform',
-    'project.ecommerce.description': 'Una plataforma de comercio electrónico completa con carrito de compras, pagos y gestión de productos.',
-    'project.taskmanager.title': 'Task Management App',
-    'project.taskmanager.description': 'Aplicación de gestión de tareas con funcionalidades de arrastrar y soltar, notificaciones y colaboración en equipo.',
-    'project.portfolio.title': 'Portfolio Template',
-    'project.portfolio.description': 'Un template elegante y personalizable para portfolios profesionales con múltiples temas.',
-    'project.fitness.title': 'Fitness Tracker',
-    'project.fitness.description': 'Aplicación de seguimiento de actividad física con análisis de datos y planes de entrenamiento personalizados.',
-    'project.chatbot.title': 'Chatbot AI',
-    'project.chatbot.description': 'Un chatbot inteligente con procesamiento de lenguaje natural para atención al cliente.',
-    'project.weather.title': 'Weather Dashboard',
-    'project.weather.description': 'Panel de control del clima con previsiones detalladas, alertas y visualización de datos.',
+    'project.weatherapp.title': 'Clima App',
+    'project.weatherapp.description': 'Aplicación de clima en tiempo real con visualización de datos.',
     
     // Contact
     'contact.title': 'Contacto',
@@ -105,18 +95,8 @@ const translations = {
     'projects.demo': 'Demo',
     
     // Project descriptions
-    'project.ecommerce.title': 'E-Commerce Platform',
-    'project.ecommerce.description': 'A complete e-commerce platform with shopping cart, payments, and product management.',
-    'project.taskmanager.title': 'Task Management App',
-    'project.taskmanager.description': 'Task management application with drag and drop functionality, notifications, and team collaboration.',
-    'project.portfolio.title': 'Portfolio Template',
-    'project.portfolio.description': 'An elegant and customizable template for professional portfolios with multiple themes.',
-    'project.fitness.title': 'Fitness Tracker',
-    'project.fitness.description': 'Physical activity tracking application with data analysis and personalized training plans.',
-    'project.chatbot.title': 'AI Chatbot',
-    'project.chatbot.description': 'An intelligent chatbot with natural language processing for customer service.',
-    'project.weather.title': 'Weather Dashboard',
-    'project.weather.description': 'Weather control panel with detailed forecasts, alerts, and data visualization.',
+    'project.weatherapp.title': 'Weather App',
+    'project.weatherapp.description': 'Real-time weather application with data visualization.',
     
     // Contact
     'contact.title': 'Contact',
@@ -182,12 +162,4 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
       {children}
     </LanguageContext.Provider>
   );
-};
-
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
 };

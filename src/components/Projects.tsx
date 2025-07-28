@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/useLanguage';
 import ProjectCard from './ProjectCard';
 import { Project } from '../types';
 
@@ -9,12 +9,12 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "🚧 Sección en Construcción",
-      description: "Nuevos proyectos emocionantes están en desarrollo. ¡Mantente atento para más contenido!",
-      technologies: ["Próximamente"],
-      repoUrl: "#",
-      demoUrl: "#",
-      imageUrl: "/images/projects/work-in-progress.webp"
+      title: t('project.weatherapp.title'),
+      description: t('project.weatherapp.description'),
+      technologies: ["React", "TypeScript", "Tailwind CSS", "OpenWeather API"],
+      repoUrl: "https://github.com/santiagojuarez86/weather-app",
+      demoUrl: "https://weather-sjdev.vercel.app/",
+      imageUrl: "/images/projects/weather.webp"
     }
   ];
 

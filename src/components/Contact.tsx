@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Linkedin, Github } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/useLanguage';
 import emailjs from '@emailjs/browser';
 
 interface FormData {

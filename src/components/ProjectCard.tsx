@@ -1,6 +1,6 @@
 import React from 'react';
 import { Github, ExternalLink } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/useLanguage';
 import { Project } from '../types';
 
 interface ProjectCardProps {
