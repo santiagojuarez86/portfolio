@@ -15,6 +15,15 @@ const Projects: React.FC = () => {
       repoUrl: "https://github.com/santiagojuarez86/weather-app",
       demoUrl: "https://weather-sjdev.vercel.app/",
       imageUrl: "/images/projects/weather.webp"
+    },
+    {
+      id: 2,
+      title: t('project.gonzalomeza.title'),
+      description: t('project.gonzalomeza.description'),
+      technologies: ["React", "TypeScript", "Tailwind CSS"],
+      repoUrl: "https://github.com/santiagojuarez86/project-gonzalomeza",
+      demoUrl: "https://project-gonzalomeza.vercel.app/",
+      imageUrl: "/images/projects/project-gonzalomeza.webp"
     }
   ];
 

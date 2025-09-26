@@ -1,4 +1,4 @@
-import React, { createContext, useState, ReactNode } from 'react';
+import { createContext, useState, ReactNode } from 'react';
 
 type Language = 'es' | 'en';
 
@@ -35,6 +35,8 @@ const translations = {
     // Project descriptions
     'project.weatherapp.title': 'Clima App',
     'project.weatherapp.description': 'Aplicación de clima en tiempo real con visualización de datos.',
+    'project.gonzalomeza.title': 'Gonzalo Meza',
+    'project.gonzalomeza.description': 'Landing page para Gonzalo Meza, entrenador personal.',
     
     // Contact
     'contact.title': 'Contacto',
@@ -97,6 +99,8 @@ const translations = {
     // Project descriptions
     'project.weatherapp.title': 'Weather App',
     'project.weatherapp.description': 'Real-time weather application with data visualization.',
+    'project.gonzalomeza.title': 'Gonzalo Meza',
+    'project.gonzalomeza.description': 'Landing page for Gonzalo Meza, personal trainer.',
     
     // Contact
     'contact.title': 'Contact',
@@ -135,13 +139,13 @@ const translations = {
   }
 };
 
-export const LanguageContext = createContext<LanguageContextType>({
+const LanguageContext = createContext<LanguageContextType>({
   language: 'es',
   toggleLanguage: () => {},
   t: () => '',
 });
 
-export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {
     const savedLanguage = localStorage.getItem('language');
     return (savedLanguage as Language) || 'es';
@@ -162,4 +166,6 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
       {children}
     </LanguageContext.Provider>
   );
-};
+}
+
+export { LanguageProvider, LanguageContext };
