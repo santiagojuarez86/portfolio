@@ -22,8 +22,17 @@ const Projects: React.FC = () => {
       description: t('project.gonzalomeza.description'),
       technologies: ["React", "TypeScript", "Tailwind CSS"],
       repoUrl: "https://github.com/santiagojuarez86/project-gonzalomeza",
-      demoUrl: "https://project-gonzalomeza.vercel.app/",
+      demoUrl: "https://gonzalomezacoach.com/",
       imageUrl: "/images/projects/project-gonzalomeza.webp"
+    },
+    {
+      id: 3,
+      title: t('project.ignaciofantinato.title'),
+      description: t('project.ignaciofantinato.description'),
+      technologies: ["React", "TypeScript", "Tailwind CSS"],
+      repoUrl: "https://github.com/santiagojuarez86/project-ignaciofantinato",
+      demoUrl: "https://ignaciofantinato.site/",
+      imageUrl: "/images/projects/project-ignaciofantinato.webp"
     }
   ];
 

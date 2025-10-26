@@ -1,12 +1,5 @@
-import { createContext, useState, ReactNode } from 'react';
-
-type Language = 'es' | 'en';
-
-interface LanguageContextType {
-  language: Language;
-  toggleLanguage: () => void;
-  t: (key: string) => string;
-}
+import { useState, ReactNode } from 'react';
+import { LanguageContext, Language } from './languageContextDefinition';
 
 const translations = {
   es: {
@@ -37,6 +30,8 @@ const translations = {
     'project.weatherapp.description': 'Aplicación de clima en tiempo real con visualización de datos.',
     'project.gonzalomeza.title': 'Gonzalo Meza',
     'project.gonzalomeza.description': 'Landing page para Gonzalo Meza, entrenador personal.',
+    'project.ignaciofantinato.title': 'Ignacio Fantinato',
+    'project.ignaciofantinato.description': 'Landing page para Ignacio Fantinato, nutricionista.',
     
     // Contact
     'contact.title': 'Contacto',
@@ -101,6 +96,8 @@ const translations = {
     'project.weatherapp.description': 'Real-time weather application with data visualization.',
     'project.gonzalomeza.title': 'Gonzalo Meza',
     'project.gonzalomeza.description': 'Landing page for Gonzalo Meza, personal trainer.',
+    'project.ignaciofantinato.title': 'Ignacio Fantinato',
+    'project.ignaciofantinato.description': 'Landing page for Ignacio Fantinato, nutritionist.',
     
     // Contact
     'contact.title': 'Contact',
@@ -139,11 +136,6 @@ const translations = {
   }
 };
 
-const LanguageContext = createContext<LanguageContextType>({
-  language: 'es',
-  toggleLanguage: () => {},
-  t: () => '',
-});
 
 function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {
@@ -168,4 +160,4 @@ function LanguageProvider({ children }: { children: ReactNode }) {
   );
 }
 
-export { LanguageProvider, LanguageContext };
+export { LanguageProvider };
