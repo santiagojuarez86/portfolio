@@ -28,20 +28,23 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center">
+    <section 
+      className="relative min-h-screen flex items-center justify-center"
+      aria-label="Hero section"
+    >
       <div className="container mx-auto px-4 text-center">
         {/* Critical content - no animation delay for LCP */}
-        <div>
+        <header>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 to-teal-300 text-transparent bg-clip-text">
             Santiago Juarez
           </h1>
-          <h2 className="text-2xl md:text-3xl font-light mb-8 bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">
+          <p className="text-2xl md:text-3xl font-light mb-8 bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">
             {t('hero.title')}
-          </h2>
+          </p>
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             {t('hero.subtitle')}
           </p>
-        </div>
+        </header>
       </div>
     </section>
   );

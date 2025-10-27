@@ -63,16 +63,20 @@ const Projects: React.FC = () => {
     <section 
       id="projects" 
       className="py-20 bg-gray-800/90 backdrop-blur-sm"
+      aria-labelledby="projects-heading"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white animate-on-scroll opacity-0">
+        <h2 
+          id="projects-heading"
+          className="text-3xl md:text-4xl font-bold text-center mb-4 text-white animate-on-scroll opacity-0"
+        >
           {t('projects.title')}
         </h2>
         <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto animate-on-scroll opacity-0" style={{transitionDelay: '200ms'}}>
           {t('projects.subtitle')}
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}

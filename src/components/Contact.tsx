@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
       setIsSubmitting(true);
       
       try {
-        const result = await emailjs.send(
+        await emailjs.send(
           import.meta.env.VITE_EMAILJS_SERVICE_ID,
           import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
           {
@@ -122,9 +122,13 @@ const Contact: React.FC = () => {
     <section 
       id="contact" 
       className="py-20 bg-gray-900/90 backdrop-blur-sm"
+      aria-labelledby="contact-heading"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white animate-on-scroll opacity-0">
+        <h2 
+          id="contact-heading"
+          className="text-3xl md:text-4xl font-bold text-center mb-4 text-white animate-on-scroll opacity-0"
+        >
           {t('contact.title')}
         </h2>
         <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto animate-on-scroll opacity-0" style={{transitionDelay: '200ms'}}>

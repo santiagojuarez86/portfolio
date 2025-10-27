@@ -10,9 +10,13 @@ const AboutMe: React.FC = () => {
     <section 
       id="about" 
       className="pt-24 pb-16 bg-gray-900/90 backdrop-blur-sm"
+      aria-labelledby="about-heading"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white animate-on-scroll opacity-0">
+        <h2 
+          id="about-heading"
+          className="text-3xl md:text-4xl font-bold text-center mb-12 text-white animate-on-scroll opacity-0"
+        >
           {t('about.title')}
         </h2>
         

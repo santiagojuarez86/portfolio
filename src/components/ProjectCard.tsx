@@ -13,14 +13,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   const isPlaceholder = project.title.includes('Construcción');
 
   return (
-    <div 
+    <article 
       className="group animate-on-scroll opacity-0 bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
       style={{ transitionDelay: `${index * 150}ms` }}
+      role="listitem"
     >
       <div className="h-48 overflow-hidden">
         <img 
           src={project.imageUrl} 
-          alt={project.title} 
+          alt={`Screenshot del proyecto ${project.title}`}
+          loading="lazy"
           className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
         />
       </div>
@@ -75,7 +77,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           </div>
         )}
       </div>
-    </div>
+    </article>
   );
 };
 
