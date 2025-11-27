@@ -32,6 +32,8 @@ const translations = {
     'project.gonzalomeza.description': 'Landing page para Gonzalo Meza, entrenador personal.',
     'project.ignaciofantinato.title': 'Ignacio Fantinato',
     'project.ignaciofantinato.description': 'Landing page para Ignacio Fantinato, nutricionista.',
+    'project.mi-mundo-psi.title': 'Mi Mundo PSI',
+    'project.mi-mundo-psi.description': 'Proyecto legacy de Mi Mundo PSI, desarrollado con Next.js.',
     
     // Contact
     'contact.title': 'Contacto',
@@ -98,6 +100,8 @@ const translations = {
     'project.gonzalomeza.description': 'Landing page for Gonzalo Meza, personal trainer.',
     'project.ignaciofantinato.title': 'Ignacio Fantinato',
     'project.ignaciofantinato.description': 'Landing page for Ignacio Fantinato, nutritionist.',
+    'project.mi-mundo-psi.title': 'Mi Mundo PSI',
+    'project.mi-mundo-psi.description': 'Legacy project for Mi Mundo PSI, developed with Next.js.',
     
     // Contact
     'contact.title': 'Contact',
