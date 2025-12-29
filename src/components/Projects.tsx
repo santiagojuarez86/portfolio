@@ -40,7 +40,7 @@ const Projects: React.FC = () => {
       description: t('project.mi-mundo-psi.description'),
       technologies: ["Next.js", "TypeScript", "JavaScript", "CSS"],
       repoUrl: "https://github.com/santiagojuarez86/mi-mundo-psi",
-      demoUrl: "https://mi-mundo-psi-three.vercel.app/",
+      demoUrl: "https://mimundopsi.com",
       imageUrl: "/images/projects/mi-mundo-psi.webp"
     }
   ];
